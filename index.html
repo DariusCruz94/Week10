@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Planner</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    
+  
+</head>
+<body class="container">
+<!-- Style CSS, section -->
+    <style>
+        body {
+            color: rgb(230, 246, 0);
+            background-color: rgb(110, 16, 102);
+            font-style: inherit;
+            background-image: url(https://cdn.dribbble.com/userupload/10087950/file/original-4df125aefe5ddce909a7120e5b14583a.jpg);
+            background-size: cover;
+            
+        }
+
+        label {
+            font-weight: bold;
+
+        }
+
+        h1 {
+            font-family: fantasy;
+            font-size: 100px;
+        }
+
+        #add {
+            color: black;
+            background-color: yellow;
+            border-color: black;
+        }
+        p {
+            color: black;
+            font-weight: bolder;
+        }
+
+        
+    </style>
+
+    <h1><u>Get your Dreambody!</u></h1>
+    <br>
+    <p><i>Do you want to Increase you health, but struggle to stay on track? Well just below you can add your workouts and set your time frame goals.  </i></p>
+
+
+<!-- Card for adding new workouts, and using rows to add Start Date & End Date inputs -->
+   <div class="card">
+      <div class ="card-body">
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="new-start-date">Workout Start Date</label>
+                    <input type="date" class="form-control" id="new-start-date">
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="new-end-date">Workout End Date</label>
+                    <input type="date" class="form-control" id="new-end-date">
+                </div>
+            </div>
+        </div>
+
+<!-- Row for New Workouts input -->       
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="new-task">New Workouts:</label>
+                    <input type="text" class="form-control" id="new-task" placeholder="Ex: Push-Ups, Sit-Ups, etc.">
+                </div>
+            </div>           
+         </div>
+        <div>
+<!-- the Button to add new workout -->
+            <br>
+            <button id="add" class="btn btn-primary from-control">Add</button>
+            </div>
+      </div>
+   </div>
+
+<!-- Table to display workout details -->
+   <table id="list" class="table table-dark table-striped">
+    <tr>
+        <th>Workout Plan</th>
+        <th>Goal Created Date</th>
+        <th>Goal Start Date</th>
+        <th>Goal Reached Date</th>
+        <th>Confirm Goal</th>
+    </tr>
+   </table>
+
+<!-- Script files -->
+  
+  <script src="todo.js"></script>
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
